@@ -40,13 +40,14 @@
 
     <div class="card">
         <div class="card-header">
-            ¿<?php echo $key['question']; ?>?
+            <?php echo $key['id'];?>.-¿<?php echo $key['question']; ?>?
+            <a href="delete.php?id=<?php echo $key['id']; ?>" class="btn btn-danger float-right">X</a>
         </div>
         <div class="card-body">
             
-            <a href="" class="btn btn-info"><?php echo $key['una']; ?></a>
-            <a href="" class="btn btn-info"><?php echo $key['dos']; ?></a>
-            <a href="" class="btn btn-info"><?php echo $key['tres']; ?></a>
+            <a href="correct.php?id=<?php echo $key['id']; ?>&correct=<?php echo $key['correct'];?>&res=1" class="btn btn-<?php echo $key['color']; ?>"><?php echo $key['una']; ?></a>
+            <a href="correct.php?id=<?php echo $key['id']; ?>&correct=<?php echo $key['correct'];?>&res=2" class="btn btn-<?php echo $key['color']; ?>"><?php echo $key['dos']; ?></a>
+            <a href="correct.php?id=<?php echo $key['id']; ?>&correct=<?php echo $key['correct'];?>&res=3" class="btn btn-<?php echo $key['color']; ?>"><?php echo $key['tres']; ?></a>
 
         </div>
     </div>
